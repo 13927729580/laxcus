@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--  database administrator account, global only one -->
+<dba>
+		<username> <![CDATA[Pentium]]> </username>
+		<password> <![CDATA[pentium]]> </password>
+		
+		<sha1> <![CDATA[9009900]]> </sha1>
+		<md5> <![CDATA[90009AF]]> </md5>
+</dba>

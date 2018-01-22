@@ -1,0 +1,12 @@
+<project default="build-sign-jar">
+
+	<target name="build-sign-jar">
+		<delete file="${basedir}/build/util/lxsign.jar"/>
+		<jar destfile="${basedir}/build/util/lxsign.jar" manifest="${basedir}/build/util/META-INF/MANIFEST.MF">
+			<fileset dir="${basedir}/bin">
+				<include name="com/lexst/util/Sign.class"/>
+			</fileset>
+		</jar>
+	</target>
+
+</project>

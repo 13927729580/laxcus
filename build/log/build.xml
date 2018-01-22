@@ -1,0 +1,42 @@
+<project default="build-log-jar">
+
+	<target name="build-log-jar">
+		<delete file="${basedir}/build/log/lxslog.jar"/>
+		<jar destfile="${basedir}/build/log/lxslog.jar" manifest="${basedir}/build/log/META-INF/MANIFEST.MF">
+
+			<fileset dir="${basedir}/bin">
+				<include name="com/lexst/thread/*.class"/>
+				<include name="com/lexst/shutdown/ShutdownSheet.class"/>
+				<include name="com/lexst/xml/*.class"/>
+				<include name="com/lexst/invoke/*.class"/>
+				<include name="com/lexst/invoke/impl/*.class"/>
+				<include name="com/lexst/fixp/**/*.class"/>
+				<include name="com/lexst/security/*.class"/>
+
+				<include name="com/lexst/log/*.class"/>
+				<include name="com/lexst/log/client/*.class"/>
+				<include name="com/lexst/log/server/*.class"/>
+				
+				<exclude name="com/lexst/log/server/Listener.class"/>
+				<exclude name="com/lexst/log/server/LogServer.class"/>
+				<exclude name="com/lexst/log/server/TCPServer.class"/>
+				<exclude name="com/lexst/log/server/UDPServer.class"/>
+				
+				<include name="com/lexst/site/*.class"/>
+				<exclude name="com/lexst/site/RankSite.class"/>
+				<include name="com/lexst/site/log/*.class"/>
+
+				<include name="com/lexst/util/**/*.class"/>
+
+				<include name="com/lexst/remote/*.class"/>
+				<include name="com/lexst/remote/client/*.class"/>
+				<include name="com/lexst/remote/client/home/LogHomeClient.class"/>
+
+				<include name="com/lexst/visit/*.class"/>
+				<include name="com/lexst/visit/naming/home/LogVisit.class"/>
+			</fileset>
+
+		</jar>
+	</target>
+
+</project>

@@ -1,0 +1,38 @@
+<project default="build-source-jar">
+
+	<target name="build-source-jar">
+		<delete file="${basedir}/build/source/lexst_all_0.15.zip"/>
+		<zip destfile="${basedir}/build/source/lexst_all_0.15.zip">
+			<fileset dir="${basedir}">
+				
+				<exclude name="**/*.jar"/>
+				<exclude name="**/*.class"/>
+				<exclude name="bin/**/*.*"/>
+
+				<!--
+				<include name="com/lexst/**/*.java"/>
+				
+				<include name="com/lexst/live/**/*.gif"/>
+				<include name="com/lexst/live/**/*.png"/>
+				<include name="com/lexst/live/**/*.ini"/>
+				<include name="com/lexst/live/rsakey.public"/>
+				
+				<exclude name="com/lexst/fixp/RSAFrame.java"/>
+				<exclude name="com/lexst/util/host/Echo.java"/>
+				
+				<exclude name="com/lexst/sql/RegexFrame.java"/>
+				<exclude name="com/lexst/util/Digit.class"/>
+				<exclude name="com/lexst/util/Numeric2.java"/>
+				<exclude name="com/lexst/util/NumericBack.java"/>
+				<exclude name="com/lexst/util/Sleep.java"/>
+				<exclude name="com/lexst/data/TestLauncher.java"/>
+				<exclude name="com/lexst/db/statement/DC2.java"/>
+				<exclude name="com/lexst/db/statement/DCKey.java"/>
+				<exclude name="com/lexst/util/lock/Scan.java"/>
+				<exclude name="com/lexst/util/host/AddressPair.java"/>
+				-->
+			</fileset>
+		</zip>
+	</target>
+
+</project>

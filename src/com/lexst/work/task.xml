@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- aggregate task -->
+<interface>
+
+	<!-- 
+	sample
+	project-class, from com.lexst.util.naming.Project
+	task-class, from com.lexst.work.dc.DirectTask or ConductTask
+	resource, any data, filename or other
+	-->
+	<task>
+		<naming> aggregate-sample </naming>
+		<project-class> org.sample.dc.EngineProject </project-class>
+		<task-class> org.sample.dc.EngineTask </task-class>
+		<resource> <![CDATA[ user data (filename or any) ]]> </resource>
+	</task>
+
+</interface>

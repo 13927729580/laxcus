@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application>
+
+	<!-- home site address is final -->
+	<home-site>
+		<ip> localhost </ip>
+		<tcp-port> 8000 </tcp-port>	<!-- tcp listener -->
+		<udp-port> 8000 </udp-port>	<!-- udp listener -->
+	</home-site>
+
+	<local-site>
+		<ip> localhost </ip>
+		<tcp-port> 5222 </tcp-port>
+		<udp-port> 5222 </udp-port>
+	</local-site>
+
+	<accept-shutdown-address>
+		<ip> 192.168.1.100 </ip>
+		<ip> 192.168.1.122 </ip>
+	</accept-shutdown-address>
+	
+	<async-path> <![CDATA[E:/lexst/store/data]]> </async-path>
+	
+	<adc-path> <![CDATA[/diska/store]]> </adc-path>
+
+	<data-path> <![CDATA[E:/lexst/store/data]]> </data-path>
+
+	<!-- rack mount rank of the data site, default is 1 -->
+	<!--
+		机架分级标准：
+		1. 处于同一个机架的分级相同
+		2. 机架范围在 0 - 127之间，缺省是0
+		3. 级别为0的机架处于处理最前端，用于接收数据
+		4. 级别数>0的机架是做为备份机架使用
+		5. 当级别为0的机架中的机器磁盘空间已经满时，HOME节点自动分配为1的机器保存数据，并依次类推
+	-->
+	<rank> master </rank>
+
+	<!-- JNI threads -->
+	<job-threads> 3 </job-threads>
+
+	<directory>
+		<build> /home/build/lexst </build> <!-- db build directory -->
+		<cache> /home/cache/lexst </cache>	<!-- db cache directory -->
+		<store> /lexst/db1/ </store>	<!-- db store directory, allow multi -->
+		<store> /lexst/db2/ </store>
+	</directory>
+
+	<log>
+		<level> debug </level> <!-- log level: debug, info, warning, error, fatal -->
+		<console-print> yes </console-print> <!-- yes, no -->
+		<directory> /lexst/log/data </directory>
+		<filesize> 20 </filesize> <!-- local file, unit: M -->
+		<send-mode> none </send-mode>  <!-- mode type: none, file, server -->
+		<buffer-size> 10 </buffer-size> <!-- log buffer size, unit: K -->
+		<send-interval> 15 </send-interval> <!-- send interval time, unit: second -->
+	</log>
+
+</application>

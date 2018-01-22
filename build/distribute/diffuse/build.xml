@@ -1,0 +1,28 @@
+<project default="build-diffuse-jar">
+
+	<target name="build-diffuse-jar">
+		<delete file="${basedir}/build/distribute/diffuse/lexst_diffuse.jar"/>
+		<jar destfile="${basedir}/build/distribute/diffuse/lexst_diffuse.jar" manifest="${basedir}/build/distribute/diffuse/META-INF/MANIFEST.MF">
+
+			<fileset dir="${basedir}/bin">
+				<include name="com/lexst/thread/*.class"/>
+				<include name="com/lexst/xml/*.class"/>
+				<include name="com/lexst/pool/*.class"/>
+				<include name="com/lexst/algorithm/*.class"/>
+				<include name="com/lexst/algorithm/diffuse/*.class"/>
+				<include name="com/lexst/util/naming/*.class"/>
+				
+				<include name="com/lexst/db/schema/*.class"/>
+				<include name="com/lexst/db/statement/*.class"/>
+				<include name="com/lexst/db/statement/dc/*.class"/>
+				<include name="com/lexst/util/host/*.class"/>
+				<include name="com/lexst/util/Numeric.class"/>
+				
+				<include name="com/lexst/log/*.class"/>
+				<include name="com/lexst/log/client/*.class"/>
+			</fileset>
+
+		</jar>
+	</target>
+
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- table account, only insert, select, delete -->
+
+<app>
+
+	<account>
+		<database><![CDATA[UNIX]]> </database>
+		<table> <![CDATA[LEXST]]> </table>
+		<password> <![CDATA[LIST]]> </password>
+	</account>
+
+	<account>
+		<database> <![CDATA[WINDOWS]]> </database>
+		<table> <![CDATA[LEXST]]> </table>
+		<password> <![CDATA[SLAVE]]> </password>
+	</account>
+
+</app>

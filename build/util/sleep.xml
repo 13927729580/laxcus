@@ -1,0 +1,12 @@
+<project default="build-sleep-jar">
+
+	<target name="build-sleep-jar">
+		<delete file="${basedir}/build/util/sleep.jar"/>
+		<jar destfile="${basedir}/build/util/sleep.jar" manifest="${basedir}/build/util/META-INF/MANIFEST.MF">
+			<fileset dir="${basedir}/bin">
+				<include name="com/lexst/util/Sleep.class"/>
+			</fileset>
+		</jar>
+	</target>
+
+</project>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- table space, only insert, select, delete -->
+
+<app>
+
+	<space>
+		<db><![CDATA[UNIX]]> </db>
+		<table> <![CDATA[LEXST]]> </table>
+	</space>
+
+	<space>
+		<db> <![CDATA[WINDOWS]]> </db>
+		<table> <![CDATA[LEXST]]> </table>
+	</space>
+
+</app>

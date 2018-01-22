@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<security>
+
+	<server>
+		<!-- none, address-match, address-check, ciphertext-check, double-check  -->
+		<type> double-check </type>
+
+		<!-- legal ip range set -->		
+		<address-range>
+			<range>
+				<begin> 192.168.0.1 </begin>
+				<end> 192.168.0.254 </end>
+			</range>
+			<range>
+				<begin> 192.168.12.1 </begin>
+				<end> 192.168.12.230 </end>
+			</range>
+		</address-range>
+
+		<!-- private key -->
+		<rsa-private-key>
+			<file> <![CDATA[c:/rsakey.private]]> </file>
+			<!-- OR -->
+			<code> 
+				<modulus><![CDATA[ba74b4578f6eeff023f6687981f16cd25986d3ee21474cfaabf39d65c9e020362baca33cc04b234bbb0d03fb1d209c3a1f8989a19aeae415cc40f162aeb81f1d83c88faa6b10659cef1b11e57c8b63e21b3e8b1421a645db9f1bd181fd85420469f32337a988d2951358b254c201067f7dbe8092fed58e2d19497b185fc4e817]]></modulus>
+				<exponent><![CDATA[685909d87ae0260da9c2ac035c5285894f2b228e0137cafffa9d72f7d53bc62b2ad409e2e4e6e810e8d4c6e6910d8001134740ac1d6bd94bcdac86aaa88748799f846749f2f1d2bb7762f78ff6054d29073c9aacb9323921310ec66ca8ec027be22277d6c3051e847d74d89c4671035c4906a5f45260a632fbd006296d543989]]></exponent> 
+			</code> 
+		</rsa-private-key>
+	</server>
+	
+	<client>
+		<!-- public key -->
+		<rsa-public-key>
+			<file> <![CDATA[c:/rsakey.public]]> </file>
+			<!-- OR -->
+			<code>
+				<modulus><![CDATA[ba74b4578f6eeff023f6687981f16cd25986d3ee21474cfaabf39d65c9e020362baca33cc04b234bbb0d03fb1d209c3a1f8989a19aeae415cc40f162aeb81f1d83c88faa6b10659cef1b11e57c8b63e21b3e8b1421a645db9f1bd181fd85420469f32337a988d2951358b254c201067f7dbe8092fed58e2d19497b185fc4e817]]></modulus>
+				<exponent><![CDATA[10001]]></exponent>
+			</code>
+		</rsa-public-key>
+	</client>
+
+</security>

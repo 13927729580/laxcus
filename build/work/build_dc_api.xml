@@ -1,0 +1,22 @@
+<project default="build-workdcapi-jar">
+
+	<target name="build-workdcapi-jar">
+		<delete file="${basedir}/build/work/work_dc_api.jar"/>
+		<jar destfile="${basedir}/build/work/work_dc_api.jar" manifest="${basedir}/build/work/META-INF/MANIFEST.MF">
+
+			<fileset dir="${basedir}/bin">
+				<include name="com/lexst/work/dc/*.class"/>
+				<include name="com/lexst/util/Numeric.class"/>
+				
+				<include name="com/lexst/db/statement/*.class"/>
+				<include name="com/lexst/db/schema/*.class"/>
+				<include name="com/lexst/util/host/*.class"/>
+				<include name="com/lexst/util/lock/*.class"/>
+				<include name="com/lexst/util/naming/*.class"/>
+					
+			</fileset>
+
+		</jar>
+	</target>
+
+</project>

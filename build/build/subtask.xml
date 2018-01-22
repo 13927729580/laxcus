@@ -1,0 +1,56 @@
+<project default="btask-btask-jar">
+
+	<target name="btask-btask-jar">
+		<delete file="${basedir}/build/build/build_basic_api.jar"/>
+		<jar destfile="${basedir}/build/build/build_basic_api.jar" manifest="${basedir}/build/build/META-INF/MANIFEST.MF">
+
+			<fileset dir="${basedir}/bin">
+				<include name="com/lexst/thread/VirtualThread.class"/>
+				<include name="com/lexst/build/task/*.class"/>
+				<include name="com/lexst/data/Install.class"/>
+				<include name="com/lexst/site/*.class"/>
+				<include name="com/lexst/site/build/*.class"/>
+				
+				<include name="com/lexst/db/Type.class"/>
+				<include name="com/lexst/db/schema/Space.class"/>
+				<include name="com/lexst/db/schema/Layout.class"/>
+				<include name="com/lexst/db/schema/Table.class"/>
+				<include name="com/lexst/db/schema/Sheet.class"/>
+				<include name="com/lexst/db/chunk/ChunkIdentity.class"/>
+				<include name="com/lexst/db/chunk/Chunk.class"/>
+				<include name="com/lexst/db/statement/SQLMethod.class"/>
+				<include name="com/lexst/db/statement/DefaultInsert.class"/>
+				<include name="com/lexst/db/statement/Inject.class"/>
+				<include name="com/lexst/db/field/*.class"/>
+				<include name="com/lexst/db/column/*.class"/>
+				<include name="com/lexst/db/row/*.class"/>
+				
+				<include name="com/lexst/db/charset/SQLChar.class"/>
+				<include name="com/lexst/db/charset/SQLCharType.class"/>
+				<include name="com/lexst/db/charset/UTF*.class"/>
+				
+				<include name="com/lexst/visit/Visit.class"/>
+				<include name="com/lexst/visit/VisitException.class"/>
+				<include name="com/lexst/visit/naming/home/HomeVisit.class"/>
+				<include name="com/lexst/visit/naming/data/DataVisit.class"/>
+				<include name="com/lexst/fixp/*.class"/>
+				<include name="com/lexst/fixp/client/*.class"/>
+				<include name="com/lexst/remote/client/RemoteClient.class"/>
+				<include name="com/lexst/remote/client/ThreadClient.class"/>
+				<include name="com/lexst/remote/client/home/HomeClient.class"/>
+				<include name="com/lexst/remote/client/data/DataClient.class"/>
+				<include name="com/lexst/remote/client/data/DataDownloader.class"/>
+
+				<include name="com/lexst/util/naming/*.class"/>
+				<include name="com/lexst/util/Numeric.class"/>
+				<include name="com/lexst/util/IPv4.class"/>
+				<include name="com/lexst/util/host/SiteHost.class"/>
+				<include name="com/lexst/util/host/SocketHost.class"/>
+				<include name="com/lexst/util/lock/*.class"/>
+
+			</fileset>
+
+		</jar>
+	</target>
+
+</project>

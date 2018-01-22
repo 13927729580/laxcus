@@ -1,0 +1,61 @@
+<project default="build-sqlconsole-jar">
+
+	<target name="build-sqlconsole-jar">
+		<delete file="${basedir}/build/console/lxsqlconsole.jar"/>
+		<jar destfile="${basedir}/build/console/lxsqlconsole.jar" manifest="${basedir}/build/console/META-INF/MANIFEST.MF">
+
+			<fileset dir="${basedir}">
+				<include name="conf/terminal/key/rsa/rsakey.public"/>
+				<include name="conf/terminal/ini/help.ini"/>
+			</fileset>
+			
+			<fileset dir="${basedir}/bin">
+				<include name="com/lexst/sql/**/*.class"/>
+				<include name="com/lexst/util/range/*.class"/>
+				<include name="com/lexst/util/res/*.class"/>
+				<include name="com/lexst/fixp/**/*.class"/>
+				<include name="com/lexst/security/*.class"/>
+				<include name="com/lexst/thread/*.class"/>
+				<include name="com/lexst/pool/*.class"/>
+				
+				<include name="com/lexst/util/naming/*.class"/>
+				<include name="com/lexst/algorithm/*.class"/>
+				<include name="com/lexst/algorithm/collect/**/*.class"/>
+
+				<include name="com/lexst/log/*.class"/>
+				<include name="com/lexst/log/client/*.class"/>
+
+				<include name="com/lexst/invoke/*.class"/>
+				<include name="com/lexst/invoke/impl/*.class"/>
+
+				<include name="com/lexst/live/*.class"/>
+				<include name="com/lexst/live/help.ini"/>
+				<include name="com/lexst/live/rsakey.public"/>
+				<include name="com/lexst/live/pool/*.class"/>
+				<include name="com/lexst/live/console/*.class"/>
+				<include name="com/lexst/live/util/*.class"/>
+
+				<include name="com/lexst/util/*.class"/>
+				<include name="com/lexst/util/lock/*.class"/>
+				<include name="com/lexst/util/host/*.class"/>
+				<include name="com/lexst/xml/*.class"/>
+
+				<include name="com/lexst/site/*.class"/>
+				<exclude name="com/lexst/site/RankSite.class"/>
+				<include name="com/lexst/site/live/*.class"/>
+
+				<include name="com/lexst/remote/*.class"/>
+				<include name="com/lexst/remote/client/*.class"/>
+				<include name="com/lexst/remote/client/top/*.class"/>
+				<include name="com/lexst/remote/client/home/*.class"/>
+				<include name="com/lexst/remote/client/call/*.class"/>
+
+				<include name="com/lexst/visit/*.class"/>
+				<include name="com/lexst/visit/naming/top/*.class"/>
+				<include name="com/lexst/visit/naming/home/*.class"/>
+				<include name="com/lexst/visit/naming/call/*.class"/>
+			</fileset>
+		</jar>
+	</target>
+
+</project>

@@ -1,0 +1,25 @@
+<project default="build-collect-jar">
+
+	<target name="build-collect-jar">
+		<delete file="${basedir}/build/distribute/collect/lexst_collect.jar"/>
+		<jar destfile="${basedir}/build/distribute/collect/lexst_collect.jar" manifest="${basedir}/build/distribute/collect/META-INF/MANIFEST.MF">
+
+			<fileset dir="${basedir}/bin">
+				<include name="com/lexst/thread/*.class"/>
+				<include name="com/lexst/xml/*.class"/>
+				<include name="com/lexst/pool/*.class"/>
+				<include name="com/lexst/algorithm/*.class"/>
+				<include name="com/lexst/algorithm/collect/*.class"/>
+				<include name="com/lexst/util/naming/*.class"/>
+				
+				<include name="com/lexst/db/**/*.class"/>
+				<include name="com/lexst/live/window/query/TabPanel.class"/>
+				
+				<include name="com/lexst/log/*.class"/>
+				<include name="com/lexst/log/client/*.class"/>
+			</fileset>
+
+		</jar>
+	</target>
+
+</project>

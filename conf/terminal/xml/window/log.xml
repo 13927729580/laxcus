@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app>
+	<log>
+		<level> debug </level> <!-- log level: debug, info, warning, error, fatal -->
+		<console-print> yes </console-print> <!-- or: no -->
+		<send-mode> none </send-mode>  <!-- mode type: none, file, server -->
+		<directory> /log/ </directory>
+		<filesize> 20 </filesize> <!-- local file, unit: M -->
+		<buffer-size> 10 </buffer-size> <!-- log buffer size, unit: K -->
+		<send-interval> 5 </send-interval> <!-- send interval time, unit: second -->
+	</log>
+</app>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application>
+
+	<directory>
+		<build> /store/convert/build/ </build>
+		<cache> /store/convert/cache/ </cache>
+		<store> /store/convert/db1/ </store>
+		<store> /store/convert/db2/ </store>
+	</directory>
+	
+	<!-- old task -->
+	<!--
+	<task>
+		<naming>Hunk</naming>
+		<class> <![CDATA[com.wole.build.HunkTask]]> </class>
+		<resource> <![CDATA[ disk filename or resolve data ]]> </resource>
+	</task>
+	-->
+	
+	<!--  
+	new task:
+	project-class, from com.lexst.util.naming.Project
+	task-class, from com.lexst.build.task.BuildTask 
+	-->
+	<task>
+		<project-class> <![CDATA[com.wole.build.HunkProject]]> </project-class>
+
+		<naming>Hunk</naming>
+		<task-class> <![CDATA[com.wole.build.HunkTask]]> </task-class>
+		<resource> <![CDATA[ disk filename or resolve data ]]> </resource>
+	</task>
+
+</application>

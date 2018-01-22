@@ -1,0 +1,26 @@
+<project default="build-aggregate-jar">
+
+	<target name="build-aggregate-jar">
+		<delete file="${basedir}/build/distribute/aggregate/lexst_aggregate.jar"/>
+		<jar destfile="${basedir}/build/distribute/aggregate/lexst_aggregate.jar" manifest="${basedir}/build/distribute/aggregate/META-INF/MANIFEST.MF">
+
+			<fileset dir="${basedir}/bin">
+				<include name="com/lexst/thread/*.class"/>
+				<include name="com/lexst/xml/*.class"/>
+				<include name="com/lexst/pool/*.class"/>
+				<include name="com/lexst/algorithm/*.class"/>
+				<include name="com/lexst/algorithm/aggregate/*.class"/>
+				<include name="com/lexst/util/naming/*.class"/>
+				
+				<include name="com/lexst/fixp/*.class"/>
+				<include name="com/lexst/util/Numeric.class"/>
+				<include name="com/lexst/util/host/SocketHost.class"/>
+				
+				<include name="com/lexst/log/*.class"/>
+				<include name="com/lexst/log/client/*.class"/>
+			</fileset>
+
+		</jar>
+	</target>
+
+</project>

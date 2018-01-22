@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- auto generate -->
+
+<application>
+
+	<database>
+		<name>database name1</name>
+		<table>
+			<name>table name1</name>
+		</table>
+		<table>
+			<name>table name2</name>
+		</table>
+	</database>
+
+	<database>
+		<name> database name2 </name>
+		<table>
+			<name> table name </name>
+		</table>
+		<table>
+			<name> table name 2</name>
+		</table>
+	</database>
+
+	<free-chunkid-set>
+		<id> aae3 </id>
+		<id> 3dda </id>
+	</free-chunkid-set>
+
+</application>

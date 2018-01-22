@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application>
+
+	<!-- home site address is final -->
+	<home-site>
+		<ip> localhost </ip>
+		<tcp-port> 8000 </tcp-port>	<!-- tcp listener -->
+		<udp-port> 8000 </udp-port>	<!-- udp listener -->
+	</home-site>
+
+	<!-- work site local address -->
+	<local-site>
+		<ip> localhost </ip>
+		<tcp-port> 8233 </tcp-port>
+		<udp-port> 8233 </udp-port>
+	</local-site>
+
+	<accept-shutdown-address>
+		<ip> 192.168.1.100 </ip>
+		<ip> 192.168.1.122 </ip>
+	</accept-shutdown-address>
+
+	<task-file> D:/workspace/lexst/src/com/lexst/build/task.xml </task-file>
+
+	<log>
+		<level> debug </level> <!-- log level: debug, info, warning, error, fatal -->
+		<console-print> yes </console-print> <!-- yes, no -->
+		<directory> /lexst/log/data </directory>
+		<filesize> 20 </filesize> <!-- local file, unit: M -->
+		<send-mode> none </send-mode>  <!-- mode type: none, file, tcp, udp -->
+		<buffer-size> 10 </buffer-size> <!-- log buffer size, unit: K -->
+		<send-interval> 15 </send-interval> <!-- send interval time, unit: second -->
+	</log>
+
+</application>

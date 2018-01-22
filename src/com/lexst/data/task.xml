@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- split task -->
+<interface>
+
+	<!-- 
+	diffuse sample
+	project-class, from com.lexst.util.naming.Project
+	task-class, from com.lexst.data.dc.DiffuseTask (DirectTask or ConductTask) 
+	resource: any data, include space
+	-->
+	<task>
+		<project-class> org.engine.search.SearchProject </project-class>
+		
+		<naming> Diffuse-Project-Sample </naming>
+		<task-class> org.engine.search.SearchTask </task-class>
+		<resource> <![CDATA[ user data (filename or any) ]]> </resource>
+	</task>
+
+</interface>

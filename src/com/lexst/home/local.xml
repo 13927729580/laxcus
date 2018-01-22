@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application>
+
+	<!-- top site address -->
+	<top-site>
+		<ip> localhost </ip>
+		<tcp-port> 9000 </tcp-port>
+		<udp-port> 9000 </udp-port>
+	</top-site>
+
+	<!-- home site listen address -->
+	<local-site>
+		<ip> localhost </ip>
+		<tcp-port> 8000 </tcp-port>
+		<udp-port> 8000 </udp-port>
+	</local-site>
+
+	<backup-sites>
+		<copy-time> 30 </copy-time>
+  	
+		<backup-site>
+			<ip> localhost </ip>
+			<tcp-port> 5566 </tcp-port>
+			<udp-port> 5566 </udp-port>
+		</backup-site>
+
+		<backup-site>
+			<ip> localhost </ip>
+			<tcp-port> 7788 </tcp-port>
+			<udp-port> 7788 </udp-port>
+		</backup-site>
+	</backup-sites>
+
+	<data-path> <![CDATA[E:/lexst/store/home]]> </data-path>
+	
+
+	
+	<sleep-time> 5 </sleep-time> 		<!-- xxxPool sleep time -->
+	<site-timeout>20</site-timeout> 	<!-- login site timeout -->
+	<delete-timeout>60</delete-timeout> <!-- delete login site -->
+
+	<log>
+		<level> debug </level> <!-- log level: debug, info, warning, error, fatal -->
+		<console-print> yes </console-print> <!-- or: no -->
+		<directory> f:/logs/home </directory>
+		<filesize> 20 </filesize> <!-- local file, unit: M -->
+		<send-mode> file </send-mode>  <!-- mode type: none, file, server -->
+		<buffer-size> 10 </buffer-size> <!-- log buffer size, unit: K -->
+		<send-interval> 5 </send-interval> <!-- send interval time, unit: second -->
+	</log>
+
+</application>

@@ -1,0 +1,19 @@
+<project default="build-logclient-jar">
+
+	<target name="build-logclient-jar">
+		<delete file="${basedir}/build/log/lxslogclient.jar"/>
+		<jar destfile="${basedir}/build/log/lxslogclient.jar" manifest="${basedir}/build/log/META-INF/MANIFEST.MF">
+
+			<fileset dir="${basedir}/bin">
+				<include name="com/lexst/thread/VirtualThread.class"/>
+				<include name="com/lexst/log/*.class"/>
+				<include name="com/lexst/log/client/*.class"/>
+				
+				<include name="com/lexst/fixp/**/*.class"/>
+				<exclude name="com/lexst/fixp/monitor/*.class"/>
+			</fileset>
+
+		</jar>
+	</target>
+
+</project>

@@ -1,0 +1,22 @@
+<project default="build-shutdown-jar">
+
+	<target name="build-shutdown-jar">
+		<delete file="${basedir}/build/shutdown/shutdown.jar"/>
+		<jar destfile="${basedir}/build/shutdown/shutdown.jar" manifest="${basedir}/build/shutdown/META-INF/MANIFEST.MF">
+			<fileset dir="${basedir}/bin">
+
+				<include name="com/lexst/shutdown/Shutdown.class"/>
+				<include name="com/lexst/util/Numeric.class"/>
+				<include name="com/lexst/util/host/Address.class"/>
+				<include name="com/lexst/util/host/SocketHost.class"/>
+				<include name="com/lexst/xml/XMLocal.class"/>
+				<include name="com/lexst/fixp/*.class"/>
+				<exclude name="com/lexst/fixp/Stream.class"/>
+				<include name="com/lexst/fixp/client/*.class"/>
+				<exclude name="com/lexst/fixp/client/FixpStreamClient.class"/>
+
+			</fileset>
+		</jar>
+	</target>
+
+</project>

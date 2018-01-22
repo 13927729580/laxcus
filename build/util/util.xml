@@ -1,0 +1,23 @@
+<project default="build-util-jar">
+
+	<target name="build-util-jar">
+		<delete file="${basedir}/build/util/lexst_util_api.jar"/>
+		<jar destfile="${basedir}/build/util/lexst_util_api.jar" manifest="${basedir}/build/util/META-INF/MANIFEST.MF">
+			<fileset dir="${basedir}/bin">
+				<include name="com/lexst/util//*.class"/>
+				<include name="com/lexst/util/lock/*.class"/>
+				<include name="com/lexst/util/datetime/*.class"/>
+				
+				<exclude name="com/lexst/util/Numeric2.class"/>
+				<exclude name="com/lexst/util/Scaler.class"/>
+				<exclude name="com/lexst/util/Sign.class"/>
+				<exclude name="com/lexst/util/Sleep.class"/>
+				<exclude name="com/lexst/util/effect/*.class"/>
+				<exclude name="com/lexst/util/host/*.class"/>
+				
+				<!-- <include name="com/lexst/util/Sleep.class"/> -->
+			</fileset>
+		</jar>
+	</target>
+
+</project>

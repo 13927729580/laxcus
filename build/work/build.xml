@@ -1,0 +1,58 @@
+<project default="build-work-jar">
+
+	<target name="build-work-jar">
+		<delete file="${basedir}/build/work/lxswork.jar"/>
+		<jar destfile="${basedir}/build/work/lxswork.jar" manifest="${basedir}/build/work/META-INF/MANIFEST.MF">
+
+			<fileset dir="${basedir}/bin">
+				<exclude name="com/lexst/pool/site/ToListener.class"/>
+				<exclude name="com/lexst/pool/site/ToPool.class"/>
+				
+				<include name="com/lexst/thread/*.class"/>
+				<include name="com/lexst/pool/*.class"/>
+				<include name="com/lexst/pool/site/*.class"/>
+				<include name="com/lexst/algorithm/*.class"/>
+				<include name="com/lexst/algorithm/choose/*.class"/>
+				<include name="com/lexst/algorithm/to/*.class"/>
+				<include name="com/lexst/algorithm/disk/*.class"/>
+				
+				<include name="com/lexst/shutdown/ShutdownSheet.class"/>
+				<include name="com/lexst/xml/*.class"/>
+				<include name="com/lexst/invoke/*.class"/>
+				<include name="com/lexst/invoke/impl/*.class"/>
+				<include name="com/lexst/fixp/**/*.class"/>
+				<include name="com/lexst/security/*.class"/>
+				<include name="com/lexst/sql/**/*.class"/>
+				<exclude name="com/lexst/sql/parse/**/*.class"/>
+				<include name="com/lexst/util/range/*.class"/>
+
+				<include name="com/lexst/work/**/*.class"/>
+
+				<include name="com/lexst/log/*.class"/>
+				<include name="com/lexst/log/client/*.class"/>
+
+				<include name="com/lexst/site/*.class"/>
+				<include name="com/lexst/site/log/*.class"/>
+				<include name="com/lexst/site/work/*.class"/>
+				<include name="com/lexst/site/data/*.class"/>
+
+				<include name="com/lexst/util/**/*.class"/>
+
+				<include name="com/lexst/remote/*.class"/>
+				<include name="com/lexst/remote/client/*.class"/>
+				<include name="com/lexst/remote/client/home/*.class"/>
+				<include name="com/lexst/remote/client/work/*.class"/>
+				<include name="com/lexst/remote/client/data/*.class"/>
+
+				<include name="com/lexst/visit/*.class"/>
+				<include name="com/lexst/visit/naming/home/*.class"/>
+				<include name="com/lexst/visit/naming/work/*.class"/>
+				<include name="com/lexst/visit/naming/data/*.class"/>
+
+				<include name="com/lexst/visit/impl/work/*.class"/>
+			</fileset>
+
+		</jar>
+	</target>
+
+</project>

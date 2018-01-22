@@ -1,0 +1,53 @@
+<project default="build-build-jar">
+
+	<target name="build-build-jar">
+		<delete file="${basedir}/build/build/lxsbuild.jar"/>
+		<jar destfile="${basedir}/build/build/lxsbuild.jar" manifest="${basedir}/build/build/META-INF/MANIFEST.MF">
+
+			<fileset dir="${basedir}/bin">
+				<include name="com/lexst/thread/*.class"/>
+				<include name="com/lexst/shutdown/ShutdownSheet.class"/>
+				<include name="com/lexst/algorithm/*.class"/>
+				<include name="com/lexst/algorithm/build/*.class"/>
+				
+				<include name="com/lexst/xml/*.class"/>
+				<include name="com/lexst/invoke/*.class"/>
+				<include name="com/lexst/invoke/impl/*.class"/>
+				<include name="com/lexst/fixp/**/*.class"/>
+				<include name="com/lexst/security/*.class"/>
+				<include name="com/lexst/sql/**/*.class"/>
+				<exclude name="com/lexst/sql/parse/**/*.class"/>
+				<include name="com/lexst/util/range/*.class"/>
+				
+				<include name="com/lexst/build/**/*.class"/>
+				<include name="com/lexst/pool/*.class"/>
+				<include name="com/lexst/pool/util/*.class"/>
+				
+				<include name="com/lexst/log/*.class"/>
+				<include name="com/lexst/log/client/*.class"/>
+				
+				<include name="com/lexst/data/Install.class"/>
+
+				<include name="com/lexst/site/*.class"/>
+				<include name="com/lexst/site/build/*.class"/>
+
+				<include name="com/lexst/util/**/*.class"/>
+
+				<include name="com/lexst/remote/*.class"/>
+				<include name="com/lexst/remote/client/*.class"/>
+				<include name="com/lexst/remote/client/home/*.class"/>
+				<include name="com/lexst/remote/client/data/*.class"/>
+				<include name="com/lexst/remote/client/build/BuildUploader.class"/>
+
+				<include name="com/lexst/visit/*.class"/>
+				<include name="com/lexst/visit/naming/home/*.class"/>
+				<include name="com/lexst/visit/naming/build/*.class"/>
+				<include name="com/lexst/visit/naming/data/*.class"/>
+
+				<include name="com/lexst/visit/impl/build/*.class"/>
+			</fileset>
+
+		</jar>
+	</target>
+
+</project>
